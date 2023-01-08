@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:id="@+id/row_contatos"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:padding="0dp">
+
+    <TextView
+        android:id="@+id/row_contatos__text_nome"
+        style="@style/StyleTextNomeDaFragmentDadosDoCliente"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:elevation="3dp"
+        android:text="LEANDRO PEREIRA DE ROSSI"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/row_contatos__text_label_telefone"
+        style="@style/StyleTextLabelDaFragmentDadosDoCliente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:elevation="3dp"
+        android:text="@string/fragment_dados_do_cliente__telefone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/row_contatos__text_telefone"
+        app:layout_constraintTop_toBottomOf="@+id/row_contatos__text_nome" />
+
+    <TextView
+        android:id="@+id/row_contatos__text_telefone"
+        style="@style/StyleTextValoresDaFragmentDadosDoCliente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="8dp"
+        android:elevation="3dp"
+        android:drawablePadding="10dp"
+        android:text="13988-3889"
+        app:layout_constraintStart_toEndOf="@+id/row_contatos__text_label_telefone"
+        app:layout_constraintTop_toBottomOf="@+id/row_contatos__text_nome" />
+
+    <ImageView
+        android:id="@+id/row_contatos__imagem_view_telefone"
+        android:layout_width="13dp"
+        android:layout_height="13dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="8dp"
+        android:elevation="3dp"
+        android:src="@drawable/ic_maxima_telefone"
+        app:layout_constraintStart_toEndOf="@+id/row_contatos__text_telefone"
+        app:layout_constraintTop_toBottomOf="@+id/row_contatos__text_nome" />
+
+    <TextView
+        android:id="@+id/row_contatos__text_label_email"
+        style="@style/StyleTextLabelDaFragmentDadosDoCliente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="110dp"
+        android:elevation="3dp"
+        android:text="@string/fragment_dados_do_cliente__email"
+        app:layout_constraintStart_toEndOf="@+id/row_contatos__text_label_telefone"
+        app:layout_constraintTop_toBottomOf="@+id/row_contatos__text_nome" />
+
+    <TextView
+        android:id="@+id/row_contatos__text_email"
+        style="@style/StyleTextValoresDaFragmentDadosDoCliente"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:layout_marginTop="8dp"
+        android:elevation="3dp"
+        android:drawablePadding="10dp"
+        android:text="leandro.rossi@gmail.com"
+        app:layout_constraintStart_toEndOf="@+id/row_contatos__text_label_email"
+        app:layout_constraintTop_toBottomOf="@+id/row_contatos__text_nome" />
+
+    <ImageView
+        android:id="@+id/row_contatos__imagem_view_email"
+        android:layout_width="13dp"
+        android:layout_height="13dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="8dp"
+        android:elevation="3dp"
+        android:src="@drawable/ic_maxima_email"
+        app:layout_constraintStart_toEndOf="@+id/row_contatos__text_email"
+        app:layout_constraintTop_toBottomOf="@+id/row_contatos__text_nome" />
+
+    <TextView
+        android:id="@+id/row_contatos__text_label_celular"
+        style="@style/StyleTextLabelDaFragmentDadosDoCliente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:elevation="3dp"
+        android:text="@string/fragment_dados_do_cliente__celular"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/row_contatos__text_label_telefone" />
+
+    <TextView
+        android:id="@+id/row_contatos__text_celular"
+        style="@style/StyleTextValoresDaFragmentDadosDoCliente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="8dp"
+        android:elevation="3dp"
+        android:drawablePadding="10dp"
+        android:text="(62) 9 8888=9888"
+        app:layout_constraintStart_toEndOf="@+id/row_contatos__text_label_celular"
+        app:layout_constraintTop_toBottomOf="@+id/row_contatos__text_label_telefone" />
+
+
+    <ImageView
+        android:id="@+id/row_contatos__imagem_view_celular"
+        android:layout_width="13dp"
+        android:layout_height="13dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="8dp"
+        android:elevation="3dp"
+        android:src="@drawable/ic_maxima_telefone"
+        app:layout_constraintStart_toEndOf="@+id/row_contatos__text_celular"
+        app:layout_constraintTop_toBottomOf="@+id/row_contatos__text_label_telefone" />
+
+
+    <TextView
+        android:id="@+id/row_contatos__text_label_data_de_nascimento"
+        style="@style/StyleTextLabelDaFragmentDadosDoCliente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="116dp"
+        android:elevation="3dp"
+        android:text="@string/fragment_dados_do_cliente__data_de_nascimento"
+        app:layout_constraintStart_toEndOf="@+id/row_contatos__text_label_celular"
+        app:layout_constraintTop_toBottomOf="@+id/row_contatos__text_label_telefone" />
+
+    <TextView
+        android:id="@+id/row_contatos__text_data_de_nascimento"
+        style="@style/StyleTextValoresDaFragmentDadosDoCliente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="8dp"
+        android:elevation="3dp"
+        android:drawablePadding="10dp"
+        android:text="10/12/1990"
+        app:layout_constraintStart_toEndOf="@+id/row_contatos__text_label_data_de_nascimento"
+        app:layout_constraintTop_toBottomOf="@+id/row_contatos__text_label_telefone" />
+
+    <TextView
+        android:id="@+id/row_contatos__text_label_conjugue"
+        style="@style/StyleTextLabelDaFragmentDadosDoCliente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:elevation="3dp"
+        android:text="@string/fragment_dados_do_cliente__conjuge"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/row_contatos__text_label_celular" />
+
+    <TextView
+        android:id="@+id/row_contatos__text_conjugue"
+        style="@style/StyleTextValoresDaFragmentDadosDoCliente"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="8dp"
+        android:elevation="3dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:drawablePadding="10dp"
+        android:text="LILIAN SIMÃO ROSSI"
+        app:layout_constraintStart_toEndOf="@+id/row_contatos__text_label_conjugue"
+        app:layout_constraintTop_toBottomOf="@+id/row_contatos__text_label_celular" />
+
+    <TextView
+        android:id="@+id/row_contatos__text_label_data_de_nascimento_do_conjugue"
+        style="@style/StyleTextLabelDaFragmentDadosDoCliente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="106dp"
+        android:elevation="3dp"
+        android:text="@string/fragment_dados_do_cliente__data_de_nascimento_conjugue"
+        app:layout_constraintStart_toEndOf="@+id/row_contatos__text_label_conjugue"
+        app:layout_constraintTop_toBottomOf="@+id/row_contatos__text_label_celular" />
+
+    <TextView
+        android:id="@+id/row_contatos__text_data_de_nascimento_do_conjugue"
+        style="@style/StyleTextValoresDaFragmentDadosDoCliente"
+        android:layout_width="73dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:layout_marginTop="8dp"
+        android:elevation="3dp"
+        android:drawablePadding="10dp"
+        android:text="10/12/1990"
+        app:layout_constraintStart_toEndOf="@+id/row_contatos__text_label_data_de_nascimento_do_conjugue"
+        app:layout_constraintTop_toBottomOf="@+id/row_contatos__text_label_celular" />
+
+    <TextView
+        android:id="@+id/row_contatos__text_label_tipo"
+        style="@style/StyleTextLabelDaFragmentDadosDoCliente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:elevation="3dp"
+        android:text="@string/fragment_dados_do_cliente__tipo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/row_contatos__text_label_conjugue" />
+
+    <TextView
+        android:id="@+id/row_contatos__text_tipo"
+        style="@style/StyleTextValoresDaFragmentDadosDoCliente"
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="8dp"
+        android:elevation="3dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:drawablePadding="10dp"
+        android:text="Sócio"
+        app:layout_constraintStart_toEndOf="@+id/row_contatos__text_label_tipo"
+        app:layout_constraintTop_toBottomOf="@+id/row_contatos__text_label_conjugue" />
+
+    <TextView
+        android:id="@+id/row_contatos__text_label_time"
+        style="@style/StyleTextLabelDaFragmentDadosDoCliente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="132dp"
+        android:elevation="3dp"
+        android:text="@string/fragment_dados_do_cliente__time"
+        app:layout_constraintStart_toEndOf="@+id/row_contatos__text_label_tipo"
+        app:layout_constraintTop_toBottomOf="@+id/row_contatos__text_label_conjugue" />
+
+    <TextView
+        android:id="@+id/row_contatos__text_time"
+        style="@style/StyleTextValoresDaFragmentDadosDoCliente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="8dp"
+        android:elevation="3dp"
+        android:drawablePadding="10dp"
+        android:text="Flamengo"
+        app:layout_constraintStart_toEndOf="@+id/row_contatos__text_label_time"
+        app:layout_constraintTop_toBottomOf="@+id/row_contatos__text_label_conjugue" />
+
+    <TextView
+        android:id="@+id/row_contatos__text_label_hobbie"
+        style="@style/StyleTextLabelDaFragmentDadosDoCliente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:elevation="3dp"
+        android:text="@string/fragment_dados_do_cliente__hobbie"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/row_contatos__text_label_tipo" />
+
+    <TextView
+        android:id="@+id/row_contatos__text_hobbie"
+        style="@style/StyleTextValoresDaFragmentDadosDoCliente"
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="8dp"
+        android:elevation="3dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:drawablePadding="10dp"
+        android:text="Não informado"
+        app:layout_constraintStart_toEndOf="@+id/row_contatos__text_label_hobbie"
+        app:layout_constraintTop_toBottomOf="@+id/row_contatos__text_label_tipo" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

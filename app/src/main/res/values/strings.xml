@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">MaximaTech</string>
+
+    <string name="activity_main__nome_na_toolbar">maxApp</string>
+    <string name="activity_main__botao_clientes">Clientes</string>
+    <string name="activity_main__botao_pedidos">Pedidos</string>
+    <string name="activity_main__botao_resumo_de_vendas">Resumo de vendas</string>
+    <string name="activity_main__botao_ferramentas">Ferramentas</string>
+
+    <string name="menu_do_cliente__dados">Dados</string>
+    <string name="menu_do_cliente__historico_de_pedidos">Hist. Pedidos</string>
+    <string name="menu_do_cliente__alvaras">Alvarás</string>
+
+    <string name="activity_cliente__nome_na_toolbar_dados_do_cliente">Dados do cliente</string>
+    <string name="activity_cliente__nome_na_toolbar_historico_de_pedidos">Hist. de pedidos</string>
+
+    <string name="fragment_dados_do_cliente__dados_do_cliente">Dados do cliente</string>
+    <string name="fragment_dados_do_cliente__contatos">Contatos</string>
+    <string name="fragment_dados_do_cliente__cpf">CPF:</string>
+    <string name="fragment_dados_do_cliente__cnpj">CNPJ:</string>
+    <string name="fragment_dados_do_cliente__ramo_de_atividade">Ramo de atividade:</string>
+    <string name="fragment_dados_do_cliente__enderecos">Endereços:</string>
+    <string name="fragment_dados_do_cliente__verificar_status_do_cliente">Verificar status do cliente</string>
+    <string name="fragment_dados_do_cliente__telefone">Telefone:</string>
+    <string name="fragment_dados_do_cliente__celular">Celular:</string>
+    <string name="fragment_dados_do_cliente__conjuge">Cônjugue:</string>
+    <string name="fragment_dados_do_cliente__tipo">Tipo:</string>
+    <string name="fragment_dados_do_cliente__hobbie">Hobbie:</string>
+    <string name="fragment_dados_do_cliente__email">E-mail:</string>
+    <string name="fragment_dados_do_cliente__data_de_nascimento">Data Nasc:</string>
+    <string name="fragment_dados_do_cliente__data_de_nascimento_conjugue">Data Nasc. Cônjugue:</string>
+    <string name="fragment_dados_do_cliente__time">Time:</string>
+
+    <string name="toast__status_do_cliente">\u0020- Status\u0020</string>
+
+
+</resources>

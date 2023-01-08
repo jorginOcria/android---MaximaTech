@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fundo_main"
+    tools:context=".main.view.MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        style="@style/StyleToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/toolbar_principal"
+        android:elevation="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="@string/activity_main__nome_na_toolbar"
+        app:titleTextColor="@color/white" />
+
+
+    <View
+        android:id="@+id/activity_main__view_cards"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/fundo_main"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/activity_main__botao_clientes"
+        style="@style/StyleBotoesMenuPrincipal"
+        android:layout_width="155dp"
+        android:layout_height="155dp"
+        android:layout_marginStart="15dp"
+        android:elevation="4dp"
+        android:padding="15dp"
+        android:paddingTop="15dp"
+        app:layout_constraintBottom_toTopOf="@id/activity_main__botao_resumo_de_vendas"
+        app:layout_constraintEnd_toStartOf="@+id/activity_main__botao_pedidos"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/activity_main__view_cards"
+        app:layout_constraintTop_toTopOf="@+id/activity_main__view_cards" />
+
+    <ImageView
+        android:id="@+id/activity_main__imagem_view_clientes"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="30dp"
+        android:elevation="4dp"
+        android:src="@drawable/ic_maxima_pessoas"
+        app:layout_constraintBottom_toTopOf="@id/activity_main__text_clientes"
+        app:layout_constraintEnd_toEndOf="@+id/activity_main__botao_clientes"
+        app:layout_constraintStart_toStartOf="@+id/activity_main__botao_clientes"
+        app:layout_constraintTop_toTopOf="@+id/activity_main__botao_clientes" />
+
+    <TextView
+        android:id="@+id/activity_main__text_clientes"
+        style="@style/StyleTextBotoesMenuPrincipal"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:elevation="4dp"
+        android:gravity="center"
+        android:text="@string/activity_main__botao_clientes"
+        app:layout_constraintTop_toBottomOf="@+id/activity_main__imagem_view_clientes"
+        app:layout_constraintEnd_toEndOf="@+id/activity_main__botao_clientes"
+        app:layout_constraintStart_toStartOf="@+id/activity_main__botao_clientes" />
+
+
+    <Button
+        android:id="@+id/activity_main__botao_pedidos"
+        style="@style/StyleBotoesMenuPrincipal"
+        android:layout_width="155dp"
+        android:layout_height="155dp"
+        android:layout_marginEnd="15dp"
+        android:padding="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/activity_main__botao_ferramentas"
+        app:layout_constraintEnd_toEndOf="@+id/activity_main__view_cards"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/activity_main__botao_clientes"
+        app:layout_constraintTop_toTopOf="@+id/activity_main__view_cards" />
+
+    <ImageView
+        android:id="@+id/activity_main__imagem_view_pedidos"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="30dp"
+        android:elevation="4dp"
+        android:src="@drawable/ic_maxima_pedido"
+        app:layout_constraintBottom_toTopOf="@id/activity_main__text_clientes"
+        app:layout_constraintEnd_toEndOf="@+id/activity_main__botao_pedidos"
+        app:layout_constraintStart_toStartOf="@+id/activity_main__botao_pedidos"
+        app:layout_constraintTop_toTopOf="@+id/activity_main__botao_pedidos" />
+
+    <TextView
+        android:id="@+id/activity_main__text_pedidos"
+        style="@style/StyleTextBotoesMenuPrincipal"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:elevation="4dp"
+        android:gravity="center"
+        android:text="@string/activity_main__botao_pedidos"
+        app:layout_constraintTop_toBottomOf="@+id/activity_main__imagem_view_clientes"
+        app:layout_constraintEnd_toEndOf="@+id/activity_main__botao_pedidos"
+        app:layout_constraintStart_toStartOf="@+id/activity_main__botao_pedidos" />
+
+    <Button
+        android:id="@+id/activity_main__botao_resumo_de_vendas"
+        style="@style/StyleBotoesMenuPrincipal"
+        android:layout_width="155dp"
+        android:layout_height="155dp"
+        android:layout_marginStart="15dp"
+        android:padding="10dp"
+
+        app:layout_constraintBottom_toBottomOf="@id/activity_main__view_cards"
+        app:layout_constraintEnd_toStartOf="@id/activity_main__botao_ferramentas"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/activity_main__view_cards"
+        app:layout_constraintTop_toBottomOf="@+id/activity_main__botao_pedidos" />
+
+    <ImageView
+        android:id="@+id/activity_main__imagem_view_resumo_de_vendas"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="30dp"
+        android:elevation="4dp"
+        android:src="@drawable/ic_maxima_resumo_vendas"
+        app:layout_constraintBottom_toTopOf="@id/activity_main__text_resumo_de_vendas"
+        app:layout_constraintEnd_toEndOf="@+id/activity_main__botao_resumo_de_vendas"
+        app:layout_constraintStart_toStartOf="@+id/activity_main__botao_resumo_de_vendas"
+        app:layout_constraintTop_toTopOf="@+id/activity_main__botao_resumo_de_vendas" />
+
+    <TextView
+        android:id="@+id/activity_main__text_resumo_de_vendas"
+        style="@style/StyleTextBotoesMenuPrincipal"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:elevation="4dp"
+        android:gravity="center"
+        android:text="@string/activity_main__botao_resumo_de_vendas"
+        app:layout_constraintTop_toBottomOf="@+id/activity_main__imagem_view_resumo_de_vendas"
+        app:layout_constraintEnd_toEndOf="@+id/activity_main__botao_resumo_de_vendas"
+        app:layout_constraintStart_toStartOf="@+id/activity_main__botao_resumo_de_vendas" />
+
+    <Button
+        android:id="@+id/activity_main__botao_ferramentas"
+        style="@style/StyleBotoesMenuPrincipal"
+        android:layout_width="155dp"
+        android:layout_height="155dp"
+        android:layout_marginEnd="15dp"
+        android:padding="15dp"
+
+        app:layout_constraintBottom_toBottomOf="@id/activity_main__view_cards"
+        app:layout_constraintEnd_toEndOf="@+id/activity_main__view_cards"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/activity_main__botao_resumo_de_vendas"
+        app:layout_constraintTop_toBottomOf="@+id/activity_main__botao_pedidos" />
+
+    <ImageView
+        android:id="@+id/activity_main__imagem_view_ferramentas"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="30dp"
+        android:elevation="4dp"
+        android:src="@drawable/ic_maxima_ferramentas"
+        app:layout_constraintBottom_toTopOf="@id/activity_main__text_ferramentas"
+        app:layout_constraintEnd_toEndOf="@+id/activity_main__botao_ferramentas"
+        app:layout_constraintStart_toStartOf="@+id/activity_main__botao_ferramentas"
+        app:layout_constraintTop_toTopOf="@+id/activity_main__botao_ferramentas" />
+
+    <TextView
+        android:id="@+id/activity_main__text_ferramentas"
+        style="@style/StyleTextBotoesMenuPrincipal"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:elevation="4dp"
+        android:gravity="center"
+        android:text="@string/activity_main__botao_ferramentas"
+        app:layout_constraintTop_toBottomOf="@+id/activity_main__imagem_view_ferramentas"
+        app:layout_constraintEnd_toEndOf="@+id/activity_main__botao_ferramentas"
+        app:layout_constraintStart_toStartOf="@+id/activity_main__botao_ferramentas" />
+
+    <View
+        android:id="@+id/activity_main__view_informacoes_atuais_do_aplicativo"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/fundo_main"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/activity_main__versao_do_aplicativo"
+        style="@style/StyleTextVersaoDoAplicativo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="60dp"
+        android:layout_marginBottom="15dp"
+        android:gravity="center"
+        android:text="v.1.0.0"
+        app:layout_constraintBottom_toBottomOf="@+id/activity_main__view_informacoes_atuais_do_aplicativo"
+        app:layout_constraintEnd_toEndOf="@+id/activity_main__view_informacoes_atuais_do_aplicativo"
+        app:layout_constraintStart_toStartOf="@+id/activity_main__view_informacoes_atuais_do_aplicativo" />
+
+    <ImageView
+        android:id="@+id/activity_main__conexao_com_a_internet"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/ic_maxima_nuvem_conectado"
+        android:textColor="@color/cinza"
+        app:layout_constraintBottom_toBottomOf="@+id/activity_main__view_informacoes_atuais_do_aplicativo"
+        app:layout_constraintStart_toEndOf="@+id/activity_main__versao_do_aplicativo" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

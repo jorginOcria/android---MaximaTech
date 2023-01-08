@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Dev/MaximaTech/app/src/main/res/drawable-hdpi/icone_erro.xml" value="0.104" />
+        <entry key="..\:/Dev/MaximaTech/app/src/main/res/drawable-hdpi/shape_do_botao_verificar_status_do_cliente.xml" value="0.1005" />
+        <entry key="..\:/Dev/MaximaTech/app/src/main/res/drawable-hdpi/shape_toast_erro.xml" value="0.1" />
+        <entry key="..\:/Dev/MaximaTech/app/src/main/res/drawable-hdpi/shape_toast_sucesso.xml" value="0.104" />
+        <entry key="..\:/Dev/MaximaTech/app/src/main/res/drawable-hdpi/shape_view_dados_do_cliente.xml" value="0.143" />
+        <entry key="..\:/Dev/MaximaTech/app/src/main/res/drawable-mdpi/shape_botoes_principais.xml" value="0.143" />
+        <entry key="..\:/Dev/MaximaTech/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.104" />
+        <entry key="..\:/Dev/MaximaTech/app/src/main/res/drawable/ic_launcher_background.xml" value="0.143" />
+        <entry key="..\:/Dev/MaximaTech/app/src/main/res/drawable/ic_teste.xml" value="0.143" />
+        <entry key="..\:/Dev/MaximaTech/app/src/main/res/layout/activity_cliente.xml" value="0.18" />
+        <entry key="..\:/Dev/MaximaTech/app/src/main/res/layout/activity_main.xml" value="0.14" />
+        <entry key="..\:/Dev/MaximaTech/app/src/main/res/layout/activity_splash.xml" value="0.18018018018018017" />
+        <entry key="..\:/Dev/MaximaTech/app/src/main/res/layout/fragment_alvaras.xml" value="0.18018018018018017" />
+        <entry key="..\:/Dev/MaximaTech/app/src/main/res/layout/fragment_dados_do_cliente.xml" value="0.14" />
+        <entry key="..\:/Dev/MaximaTech/app/src/main/res/layout/fragment_historico_de_pedidos.xml" value="0.18018018018018017" />
+        <entry key="..\:/Dev/MaximaTech/app/src/main/res/layout/row_contatos.xml" value="0.25" />
+        <entry key="..\:/Dev/MaximaTech/app/src/main/res/layout/toast_personalizado.xml" value="0.15625" />
+        <entry key="..\:/Dev/MaximaTech/app/src/main/res/layout/toolbar.xml" value="0.20833333333333334" />
+        <entry key="..\:/Dev/MaximaTech/app/src/main/res/menu/menu.xml" value="0.18018018018018017" />
+        <entry key="..\:/Dev/MaximaTech/app/src/main/res/menu/menu_do_cliente.xml" value="0.18018018018018017" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

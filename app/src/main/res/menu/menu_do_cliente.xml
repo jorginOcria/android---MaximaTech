@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/item_dados"
+        android:icon="@drawable/ic_maxima_pessoa_inativo"
+        android:title="@string/menu_do_cliente__dados" />
+
+    <item
+        android:id="@+id/item_historico_de_pedidos"
+        android:icon="@drawable/ic_maxima_historico_pedidos_inativo"
+        android:title="@string/menu_do_cliente__historico_de_pedidos" />
+
+    <item
+        android:id="@+id/item_alvaras"
+        android:icon="@drawable/ic_maxima_alvara_inativo"
+        android:title="@string/menu_do_cliente__alvaras" />
+
+
+</menu>
