@@ -14,7 +14,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:elevation="3dp"
-        android:text="LEANDRO PEREIRA DE ROSSI"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -39,7 +38,6 @@
         android:layout_marginTop="8dp"
         android:elevation="3dp"
         android:drawablePadding="10dp"
-        android:text="13988-3889"
         app:layout_constraintStart_toEndOf="@+id/row_contatos__text_label_telefone"
         app:layout_constraintTop_toBottomOf="@+id/row_contatos__text_nome" />
 
@@ -78,7 +76,6 @@
         android:layout_marginTop="8dp"
         android:elevation="3dp"
         android:drawablePadding="10dp"
-        android:text="leandro.rossi@gmail.com"
         app:layout_constraintStart_toEndOf="@+id/row_contatos__text_label_email"
         app:layout_constraintTop_toBottomOf="@+id/row_contatos__text_nome" />
 
@@ -113,7 +110,6 @@
         android:layout_marginTop="8dp"
         android:elevation="3dp"
         android:drawablePadding="10dp"
-        android:text="(62) 9 8888=9888"
         app:layout_constraintStart_toEndOf="@+id/row_contatos__text_label_celular"
         app:layout_constraintTop_toBottomOf="@+id/row_contatos__text_label_telefone" />
 
@@ -151,7 +147,6 @@
         android:layout_marginTop="8dp"
         android:elevation="3dp"
         android:drawablePadding="10dp"
-        android:text="10/12/1990"
         app:layout_constraintStart_toEndOf="@+id/row_contatos__text_label_data_de_nascimento"
         app:layout_constraintTop_toBottomOf="@+id/row_contatos__text_label_telefone" />
 
@@ -178,7 +173,6 @@
         android:maxLines="1"
         android:singleLine="true"
         android:drawablePadding="10dp"
-        android:text="LILIAN SIMÃO ROSSI"
         app:layout_constraintStart_toEndOf="@+id/row_contatos__text_label_conjugue"
         app:layout_constraintTop_toBottomOf="@+id/row_contatos__text_label_celular" />
 
@@ -206,7 +200,6 @@
         android:layout_marginTop="8dp"
         android:elevation="3dp"
         android:drawablePadding="10dp"
-        android:text="10/12/1990"
         app:layout_constraintStart_toEndOf="@+id/row_contatos__text_label_data_de_nascimento_do_conjugue"
         app:layout_constraintTop_toBottomOf="@+id/row_contatos__text_label_celular" />
 
@@ -233,7 +226,6 @@
         android:maxLines="1"
         android:singleLine="true"
         android:drawablePadding="10dp"
-        android:text="Sócio"
         app:layout_constraintStart_toEndOf="@+id/row_contatos__text_label_tipo"
         app:layout_constraintTop_toBottomOf="@+id/row_contatos__text_label_conjugue" />
 
@@ -258,7 +250,6 @@
         android:layout_marginTop="8dp"
         android:elevation="3dp"
         android:drawablePadding="10dp"
-        android:text="Flamengo"
         app:layout_constraintStart_toEndOf="@+id/row_contatos__text_label_time"
         app:layout_constraintTop_toBottomOf="@+id/row_contatos__text_label_conjugue" />
 
@@ -285,7 +276,6 @@
         android:maxLines="1"
         android:singleLine="true"
         android:drawablePadding="10dp"
-        android:text="Não informado"
         app:layout_constraintStart_toEndOf="@+id/row_contatos__text_label_hobbie"
         app:layout_constraintTop_toBottomOf="@+id/row_contatos__text_label_tipo" />
 

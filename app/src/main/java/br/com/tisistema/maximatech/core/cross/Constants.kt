@@ -17,7 +17,6 @@ class Constants private constructor() {
 
     object SISTEMA {
         const val TEMPO_DE_SPLASH = 3000L
-        const val NAVIGATION = 0L
         const val STRING_VAZIO = ""
     }
 
@@ -30,14 +29,15 @@ class Constants private constructor() {
         const val ENDPOINTS_GERAIS = 15L
     }
 
-    object VALIDACOES {
+    object VALIDAR {
         const val PARAMETRO_NULL = "Não informado"
     }
 
-    object DATE_FORMAT {
+    object FORMATAR {
         const val FORMATO_DE_DATA_RECEBIDO = "yyyy-MM-dd"
         const val FORMATO_DE_DATA_EXIBIDO = "dd/MM/yyyy"
-
+        const val FORMATO_DATA_E_HORA = " dd/MM/yyyy HH:mm"
+        const val FORMATO_CELULAR = "(%02d) %04d-%05d"
     }
 
     object TOAST {
@@ -48,7 +48,6 @@ class Constants private constructor() {
     }
 
     object HTTP {
-
         object STATUS_CODE {
             const val AUTORIZADO = 200
             const val ERRO_INTERNO_NO_SERVIDOR = 500

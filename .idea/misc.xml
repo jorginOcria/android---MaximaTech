@@ -15,10 +15,11 @@
         <entry key="..\:/Dev/MaximaTech/app/src/main/res/layout/activity_cliente.xml" value="0.18" />
         <entry key="..\:/Dev/MaximaTech/app/src/main/res/layout/activity_main.xml" value="0.14" />
         <entry key="..\:/Dev/MaximaTech/app/src/main/res/layout/activity_splash.xml" value="0.18018018018018017" />
+        <entry key="..\:/Dev/MaximaTech/app/src/main/res/layout/dialog_loading.xml" value="0.15625" />
         <entry key="..\:/Dev/MaximaTech/app/src/main/res/layout/fragment_alvaras.xml" value="0.18018018018018017" />
-        <entry key="..\:/Dev/MaximaTech/app/src/main/res/layout/fragment_dados_do_cliente.xml" value="0.14" />
+        <entry key="..\:/Dev/MaximaTech/app/src/main/res/layout/fragment_dados_do_cliente.xml" value="0.21" />
         <entry key="..\:/Dev/MaximaTech/app/src/main/res/layout/fragment_historico_de_pedidos.xml" value="0.18018018018018017" />
-        <entry key="..\:/Dev/MaximaTech/app/src/main/res/layout/row_contatos.xml" value="0.25" />
+        <entry key="..\:/Dev/MaximaTech/app/src/main/res/layout/row_contatos.xml" value="0.1" />
         <entry key="..\:/Dev/MaximaTech/app/src/main/res/layout/toast_personalizado.xml" value="0.15625" />
         <entry key="..\:/Dev/MaximaTech/app/src/main/res/layout/toolbar.xml" value="0.20833333333333334" />
         <entry key="..\:/Dev/MaximaTech/app/src/main/res/menu/menu.xml" value="0.18018018018018017" />

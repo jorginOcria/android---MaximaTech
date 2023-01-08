@@ -33,5 +33,12 @@
 
     <string name="toast__status_do_cliente">\u0020- Status\u0020</string>
 
+    <string name="fragment_dados_do_passageiro_alert_dialog__atencao">Atenção</string>
+    <string name="fragment_dados_do_passageiro_alert_dialog__botao_fechar">FECHAR</string>
+    <string name="fragment_dados_do_passageiro_alert_dialog__erro_ao_buscar_dados_do_cliente">Ocorreu um erro ao buscar os dados do cliente. Verifique a sua conexão com a internet e tente novamente em alguns minutos…</string>
+    <string name="fragment_dados_do_passageiro_alert_dialog__falha_ao_buscar_dados_do_cliente">Falha ao buscar dados do cliente. Tente novamente em alguns minutos…</string>
+
+    <string name="fragment_loading__carregando">Carregando…</string>
+
 
 </resources>

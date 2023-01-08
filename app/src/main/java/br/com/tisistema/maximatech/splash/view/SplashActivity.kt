@@ -3,7 +3,6 @@ package br.com.tisistema.maximatech.splash.view
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
-import android.view.View
 import androidx.lifecycle.ViewModelProvider
 import br.com.tisistema.maximatech.R
 import br.com.tisistema.maximatech.core.cross.Constants

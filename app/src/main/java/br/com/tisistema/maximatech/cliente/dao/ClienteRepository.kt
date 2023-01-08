@@ -17,7 +17,7 @@ interface ClienteRepository {
     fun update(cliente: Cliente)
 
     @Query("select * from cliente")
-    fun getAll(): List<Cliente>
+    fun getPrimeiroCliente(): Cliente?
 
     @Query("delete from cliente")
     fun deleteAll()

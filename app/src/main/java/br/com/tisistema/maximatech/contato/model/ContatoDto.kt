@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName
 data class ContatoDto(
 
     @SerializedName("nome")
-    var nome: String? = "",
+    var nome: String? = null,
 
     @SerializedName("telefone")
     var telefone: String? = null,

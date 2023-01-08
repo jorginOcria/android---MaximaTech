@@ -10,6 +10,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
 import br.com.tisistema.maximatech.R
 import br.com.tisistema.maximatech.core.util.toaspersonalizado.ToastSimpleFactory
 
@@ -17,6 +18,7 @@ abstract class AbstractFragment : Fragment() {
 
     private var toast: Toast? = null
     private lateinit var fragmentView: View
+    private var dialogLoading = DialogLoading()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -79,6 +81,28 @@ abstract class AbstractFragment : Fragment() {
         this.toast!!.view = viewToastPersonalizado
         this.toast!!.duration = Toast.LENGTH_LONG
         this.toast!!.show()
+    }
+
+    fun executarDialogLoading() {
+        criarDialogLoading()
+        mostrarDialogCarregando()
+    }
+
+    private fun criarDialogLoading() {
+        dialogLoading = DialogLoading()
+    }
+
+    private fun mostrarDialogCarregando() {
+        if (dialogLoading.getStatusDialog()) {
+            val fragManager: FragmentManager = activity!!.supportFragmentManager
+            dialogLoading.show(fragManager, "tag")
+        }
+    }
+
+    fun esconderDialogLoading() {
+        if (dialogLoading.isVisible) {
+            dialogLoading.dismiss()
+        }
     }
 
 }

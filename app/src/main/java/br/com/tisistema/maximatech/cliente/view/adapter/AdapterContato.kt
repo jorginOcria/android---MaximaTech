@@ -27,6 +27,8 @@ class AdapterContato(
     }
 
     private fun carregarValoresDeTextos(posicao: Int) {
+        val nome =
+            rowView.findViewById(R.id.row_contatos__text_nome) as TextView
         val telefone =
             rowView.findViewById(R.id.row_contatos__text_telefone) as TextView
         val celular =
@@ -47,6 +49,7 @@ class AdapterContato(
             rowView.findViewById(R.id.row_contatos__text_time) as TextView
 
         val contato = getItem(posicao) as Contato
+        nome.text = contato.nome
         telefone.text = contato.telefone
         celular.text = contato.celular
         conjugue.text = contato.conjuge

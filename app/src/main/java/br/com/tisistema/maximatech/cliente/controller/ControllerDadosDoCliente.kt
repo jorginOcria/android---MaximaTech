@@ -40,11 +40,11 @@ class ControllerDadosDoCliente(application: Application) : AbstractController(ap
 
     @SuppressLint("SimpleDateFormat")
     private val formatoDeDataRecebido: SimpleDateFormat =
-        SimpleDateFormat(Constants.DATE_FORMAT.FORMATO_DE_DATA_RECEBIDO)
+        SimpleDateFormat(Constants.FORMATAR.FORMATO_DE_DATA_RECEBIDO)
 
     @SuppressLint("SimpleDateFormat")
     private val formatoDeDataParaExibicao: SimpleDateFormat =
-        SimpleDateFormat(Constants.DATE_FORMAT.FORMATO_DE_DATA_EXIBIDO)
+        SimpleDateFormat(Constants.FORMATAR.FORMATO_DE_DATA_EXIBIDO)
 
     private val mutableSucessoAoBuscarCliente = MutableLiveData<Cliente>()
     var liveMutableSucessoAoBuscarCliente: LiveData<Cliente> =
@@ -58,7 +58,7 @@ class ControllerDadosDoCliente(application: Application) : AbstractController(ap
     var liveMutableErroAoBuscarCliente: LiveData<Boolean> =
         mutableErroAoBuscarCliente
 
-    fun requestBuscarClientes() {
+    private fun requestBuscarClientes() {
         buscarClienteRestService.getCliente(object : RestCallListener<ResponseClienteDto> {
 
             override fun onFailure(throwable: Throwable) {
@@ -83,6 +83,19 @@ class ControllerDadosDoCliente(application: Application) : AbstractController(ap
         )
     }
 
+    @SuppressLint("DefaultLocale")
+    private fun converterNumeroDeCelularParaFormatoDeExibicao(celular: String?): String? {
+        if (celular != null) {
+            return String.format(
+                Constants.FORMATAR.FORMATO_CELULAR,
+                celular.toLong() / 1000000000L % 100,
+                celular.toLong() / 10000 % 10000,
+                celular.toLong() % 100000
+            )
+        }
+        return celular
+    }
+
     @SuppressLint("SimpleDateFormat")
     private fun converterDataParaFormatoDeExibicao(data: String?): String? {
         if (!data.isNullOrEmpty()) {
@@ -92,6 +105,23 @@ class ControllerDadosDoCliente(application: Application) : AbstractController(ap
         return data
     }
 
+    private fun verificarSeExisteValorNoParametro(parametro: String?): String {
+        if (parametro == null || parametro == Constants.SISTEMA.STRING_VAZIO) {
+            return Constants.VALIDAR.PARAMETRO_NULL
+        }
+        return parametro
+    }
+
+    private fun verificarSeExisteClienteNoBancoDeDados() {
+        val cliente = clienteRepositoryService.getPrimeiroCliente()
+        if (cliente != null) {
+            cliente.contatos =
+                getContatosDoCliente(cliente.legacyId!!.toInt()) as ArrayList<Contato>?
+            carregarMutableSucessoAoBuscarCliente(cliente)
+            return
+        }
+        carregarMutableErroAoBuscarCliente()
+    }
 
     private fun carregarCliente(clienteDto: ClienteDto) {
         cliente.legacyId = verificarSeExisteValorNoParametro(clienteDto.id.toString()).toLong()
@@ -109,10 +139,8 @@ class ControllerDadosDoCliente(application: Application) : AbstractController(ap
     private fun carregarContatos(contatosDto: List<ContatoDto>) {
         val contato = Contato()
         for (contatoDto in contatosDto) {
-            contatoDto.dataDeNascimento =
-                converterDataParaFormatoDeExibicao(contatoDto.dataDeNascimento)
-            contatoDto.dataDeNascimentoDoConjuge =
-                converterDataParaFormatoDeExibicao(contatoDto.dataDeNascimentoDoConjuge)
+            contatoDto.dataDeNascimento = converterDataParaFormatoDeExibicao(contatoDto.dataDeNascimento)
+            contatoDto.dataDeNascimentoDoConjuge = converterDataParaFormatoDeExibicao(contatoDto.dataDeNascimentoDoConjuge)
             contatoDto.celular = converterNumeroDeCelularParaFormatoDeExibicao(contatoDto.celular)
             contato.conjuge = verificarSeExisteValorNoParametro(contatoDto.conjuge)
             contato.celular = verificarSeExisteValorNoParametro(contatoDto.celular)
@@ -120,34 +148,13 @@ class ControllerDadosDoCliente(application: Application) : AbstractController(ap
             contato.email = verificarSeExisteValorNoParametro(contatoDto.email)
             contato.time = verificarSeExisteValorNoParametro(contatoDto.time)
             contato.telefone = verificarSeExisteValorNoParametro(contatoDto.telefone)
-            contato.dataDeNascimento =
-                verificarSeExisteValorNoParametro(contatoDto.dataDeNascimento)
-            contato.dataDeNascimentoDoConjuge =
-                verificarSeExisteValorNoParametro(contatoDto.dataDeNascimentoDoConjuge)
+            contato.dataDeNascimento = verificarSeExisteValorNoParametro(contatoDto.dataDeNascimento)
+            contato.dataDeNascimentoDoConjuge = verificarSeExisteValorNoParametro(contatoDto.dataDeNascimentoDoConjuge)
             contato.tipo = verificarSeExisteValorNoParametro(contatoDto.tipo)
             contato.hobbie = verificarSeExisteValorNoParametro(contatoDto.hobbie)
             contato.idCliente = cliente.legacyId
             contatos.add(contato)
         }
-    }
-
-    private fun verificarSeExisteValorNoParametro(parametro: String?): String {
-        if (parametro == null || parametro == Constants.SISTEMA.STRING_VAZIO) {
-            return Constants.VALIDACOES.PARAMETRO_NULL
-        }
-        return parametro
-    }
-
-    @SuppressLint("DefaultLocale")
-    private fun converterNumeroDeCelularParaFormatoDeExibicao(celular: String?): String {
-        if (celular != null)
-            return String.format(
-                "(%02d) %04d-%05d",
-                celular.toLong() / 1000000000L % 100,
-                celular.toLong() / 10000 % 10000,
-                celular.toLong() % 100000
-            )
-        return celular.toString()
     }
 
     private fun carregarMutableSucessoAoBuscarCliente() {
@@ -162,35 +169,12 @@ class ControllerDadosDoCliente(application: Application) : AbstractController(ap
         mutableErroAoBuscarCliente.value = true
     }
 
-    fun verificarConexaoComAInternet() {
-        if (getConexaoDisponivel(context)) {
-            requestBuscarClientes()
-        } else {
-            verificarSeExisteClienteNoBancoDeDados()
-        }
-    }
-
-    private fun verificarSeExisteClienteNoBancoDeDados() {
-        val cliente = clienteRepositoryService.getAll()
-        if (cliente[0].idCliente != null) {
-            cliente[0].contatos = getContatosDoCliente(cliente[0].legacyId!!.toInt()) as ArrayList<Contato>?
-            carregarMutableSucessoAoBuscarCliente(cliente[0])
-            return
-        }
-        carregarMutableErroAoBuscarCliente()
-
-    }
-
     private fun getContatosDoCliente(idCliente: Int): List<Contato>? {
         return contatoRepositoryService.getById(idCliente)
     }
 
     private fun carregarMutableSucessoAoBuscarCliente(cliente: Cliente) {
         mutableSucessoAoBuscarCliente.value = cliente
-    }
-
-    private fun getClienteSalvoNoBancoDeDados() {
-        clienteRepositoryService.getAll()
     }
 
     private fun limparClientesNoBancoDeDados() {
@@ -208,6 +192,14 @@ class ControllerDadosDoCliente(application: Application) : AbstractController(ap
     private fun mergeContatosNoBancoDeDados() {
         for (contato in contatos) {
             contatoRepositoryService.merge(contato)
+        }
+    }
+
+    fun verificarConexaoComAInternet() {
+        if (getConexaoDisponivel(context)) {
+            requestBuscarClientes()
+        } else {
+            verificarSeExisteClienteNoBancoDeDados()
         }
     }
 

@@ -1,5 +1,6 @@
 package br.com.tisistema.maximatech.cliente.view
 
+import android.app.AlertDialog
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -9,14 +10,15 @@ import androidx.lifecycle.ViewModelProvider
 import br.com.tisistema.maximatech.R
 import br.com.tisistema.maximatech.cliente.controller.ControllerDadosDoCliente
 import br.com.tisistema.maximatech.cliente.model.Cliente
-import br.com.tisistema.maximatech.contato.model.Contato
 import br.com.tisistema.maximatech.cliente.view.adapter.AdapterContato
+import br.com.tisistema.maximatech.contato.model.Contato
 import br.com.tisistema.maximatech.core.cross.Constants
 import br.com.tisistema.maximatech.core.view.AbstractFragment
 import kotlinx.android.synthetic.main.fragment_dados_do_cliente.*
 import kotlinx.android.synthetic.main.fragment_dados_do_cliente.view.*
 import java.text.SimpleDateFormat
 import java.util.*
+
 
 class FragmentDadosDoCliente : AbstractFragment() {
 
@@ -37,8 +39,9 @@ class FragmentDadosDoCliente : AbstractFragment() {
         return fragmetDadosDoClienteView
     }
 
-    private fun verificarConexaoComAInternet(){
+    private fun verificarConexaoComAInternet() {
         controllerDadosDoCliente.verificarConexaoComAInternet()
+        executarDialogLoading()
     }
 
     override fun initControllers() {
@@ -52,6 +55,17 @@ class FragmentDadosDoCliente : AbstractFragment() {
                 carregarCliente(cliente)
                 carregarCamposDeTextoComOsDadosDoCliente(cliente)
                 cliente.contatos?.let { carregarAdapterContatos(it) }
+                esconderDialogLoading()
+            })
+        controllerDadosDoCliente.liveMutableErroAoBuscarCliente.observe(this,
+            Observer {
+                mostrarDialogErroAoBuscarCliente()
+                esconderDialogLoading()
+            })
+        controllerDadosDoCliente.liveMutableFalhaAoBuscarCliente.observe(this,
+            Observer {
+                mostrarDialogFalhaAoBuscarCliente()
+                esconderDialogLoading()
             })
     }
 
@@ -80,24 +94,47 @@ class FragmentDadosDoCliente : AbstractFragment() {
 
     private fun getDataEHoraAtual(): String {
         val date = Calendar.getInstance().time
-        val dateTimeFormat = SimpleDateFormat("dd/MM/yyyy HH:mm:ss", Locale.getDefault())
-        return dateTimeFormat.format(date)
+        val dataEHoraFormatados = SimpleDateFormat(Constants.FORMATAR.FORMATO_DATA_E_HORA, Locale.getDefault())
+        return dataEHoraFormatados.format(date)
     }
 
     private fun carregarCamposDeTextoComOsDadosDoCliente(cliente: Cliente) {
-        fragmetDadosDoClienteView.fragment_dados_do_cliente__text_razao_social.text =
-            cliente.razaoSocial
-        fragmetDadosDoClienteView.fragment_dados_do_cliente__text_nome_fantasia.text =
-            cliente.nomeFantasia
+        fragmetDadosDoClienteView.fragment_dados_do_cliente__text_razao_social.text = cliente.razaoSocial
+        fragmetDadosDoClienteView.fragment_dados_do_cliente__text_nome_fantasia.text = cliente.nomeFantasia
         fragmetDadosDoClienteView.fragment_dados_do_cliente__text_cpf.text = cliente.cpf
         fragmetDadosDoClienteView.fragment_dados_do_cliente__text_cnpj.text = cliente.cnpj
-        fragmetDadosDoClienteView.fragment_dados_do_cliente__text_ramo_de_atividade.text =
-            cliente.ramoAtividade
+        fragmetDadosDoClienteView.fragment_dados_do_cliente__text_ramo_de_atividade.text = cliente.ramoAtividade
         fragmetDadosDoClienteView.fragment_dados_do_cliente__text_enderecos.text = cliente.endereco
     }
 
-    private fun requestBuscarClientes() {
-        controllerDadosDoCliente.requestBuscarClientes()
+    private fun mostrarDialogErroAoBuscarCliente() {
+        var alertDialogBuilder = AlertDialog.Builder(activity)
+        alertDialogBuilder.setTitle(getString(R.string.fragment_dados_do_passageiro_alert_dialog__atencao))
+        alertDialogBuilder.setMessage(getString(R.string.fragment_dados_do_passageiro_alert_dialog__erro_ao_buscar_dados_do_cliente))
+        alertDialogBuilder.setPositiveButton(
+            getString(R.string.fragment_dados_do_passageiro_alert_dialog__botao_fechar)
+        ) { dialog, posicao ->
+            navegarParaActivityAnterior()
+        }
+        alertDialogBuilder.setCancelable(false)
+        alertDialogBuilder.show()
+    }
+
+    private fun mostrarDialogFalhaAoBuscarCliente() {
+        var alertDialogBuilder = AlertDialog.Builder(activity)
+        alertDialogBuilder.setTitle(getString(R.string.fragment_dados_do_passageiro_alert_dialog__atencao))
+        alertDialogBuilder.setMessage(getString(R.string.fragment_dados_do_passageiro_alert_dialog__falha_ao_buscar_dados_do_cliente))
+        alertDialogBuilder.setPositiveButton(
+            getString(R.string.fragment_dados_do_passageiro_alert_dialog__botao_fechar)
+        ) { dialog, posicao ->
+            navegarParaActivityAnterior()
+        }
+        alertDialogBuilder.setCancelable(false)
+        alertDialogBuilder.show()
+    }
+
+    private fun navegarParaActivityAnterior() {
+
     }
 
 }

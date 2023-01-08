@@ -29,8 +29,8 @@ class ClienteRepositoryService(context: Context) :
         return cliente
     }
 
-    fun getAll(): List<Cliente> {
-        return clienteRepository.getAll()
+    fun getPrimeiroCliente(): Cliente? {
+        return clienteRepository.getPrimeiroCliente()
     }
 
     fun deleteAll(){
