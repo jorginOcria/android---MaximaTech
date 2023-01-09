@@ -7,12 +7,15 @@
     <string name="activity_main__botao_resumo_de_vendas">Resumo de vendas</string>
     <string name="activity_main__botao_ferramentas">Ferramentas</string>
 
-    <string name="menu_do_cliente__dados">Dados</string>
+    <string name="menu_do_cliente__dados">Dados do cliente</string>
     <string name="menu_do_cliente__historico_de_pedidos">Hist. Pedidos</string>
     <string name="menu_do_cliente__alvaras">Alvarás</string>
 
+    <string name="menu_historico_de_pedido__legendas">Legendas</string>
+
     <string name="activity_cliente__nome_na_toolbar_dados_do_cliente">Dados do cliente</string>
     <string name="activity_cliente__nome_na_toolbar_historico_de_pedidos">Hist. de pedidos</string>
+    <string name="activity_cliente__nome_na_toolbar_alvaras">Alvarás</string>
 
     <string name="fragment_dados_do_cliente__dados_do_cliente">Dados do cliente</string>
     <string name="fragment_dados_do_cliente__contatos">Contatos</string>
@@ -38,7 +41,48 @@
     <string name="fragment_dados_do_passageiro_alert_dialog__erro_ao_buscar_dados_do_cliente">Ocorreu um erro ao buscar os dados do cliente. Verifique a sua conexão com a internet e tente novamente em alguns minutos…</string>
     <string name="fragment_dados_do_passageiro_alert_dialog__falha_ao_buscar_dados_do_cliente">Falha ao buscar dados do cliente. Tente novamente em alguns minutos…</string>
 
+    <string name="fragment_historico_de_pedido_alert_dialog__atencao">Atenção</string>
+    <string name="fragment_historico_de_pedido_alert_dialog__erro_ao_buscar_historico_de_pedido">Ocorreu um erro ao buscar histórico de pedido. Verifique a sua conexão com a internet e tente novamente em alguns minutos…</string>
+    <string name="fragment_historico_de_pedido_alert_dialog__falha_ao_buscar_historico_de_pedido">Falha ao buscar histórico de pedido. Tente novamente em alguns minutos…</string>
+    <string name="fragment_historico_de_pedido_alert_dialog__botao_fechar">FECHAR</string>
+
     <string name="fragment_loading__carregando">Carregando…</string>
+
+    <string name="row_historico_de_pedidos__numero_do_pedido">N° Ped. RCA/ERP:</string>
+    <string name="row_historico_de_pedidos__cliente">Cliente:</string>
+    <string name="row_historico_de_pedidos__critica">Crítica:</string>
+
+    <string name="fragment_alvara__texto_principal">Nada encontrado...</string>
+    <string name="fragment_alvara__texto_secundario">Não há alvarás para exibir, verifique com o responsável pelo ERP</string>
+
+    <string name="dialog_legenda__text_legenda">Legendas</string>
+    <string name="dialog_legenda__text_status_do_pedido_no_erp">Status do pedido no ERP</string>
+    <string name="dialog_legenda__text_status_processamento">Em processamento por parte do FV</string>
+    <string name="dialog_legenda__text_status_pedido_recusado_pelo_erp">Pedido recusado pelo ERP</string>
+    <string name="dialog_legenda__text_status_pedido_pendente_pelo_erp">Posição no ERP Pendente</string>
+    <string name="dialog_legenda__text_status_pedido_bloqueado_pelo_erp">Posição no ERP Bloqeuado</string>
+    <string name="dialog_legenda__text_status_pedido_liberado_pelo_erp">Posição no ERP Liberado</string>
+    <string name="dialog_legenda__text_status_pedido_montado_pelo_erp">Posição no ERP Montado</string>
+    <string name="dialog_legenda__text_status_pedido_faturado_pelo_erp">Posição no ERP Faturado</string>
+    <string name="dialog_legenda__text_status_pedido_cancelado_pelo_erp">Posição no ERP Cancelado</string>
+    <string name="dialog_legenda__text_critica_aguardando_retorno_do_erp">Aguardando retorno do ERP</string>
+    <string name="dialog_legenda__text_critica_sucesso">Sucesso</string>
+    <string name="dialog_legenda__text_critica_falha_parcial">Falha parcial</string>
+    <string name="dialog_legenda__text_critica_falha_total">Falha total</string>
+    <string name="dialog_legenda__text_legendas_pedido_sofreu_corte">Pedido sofreu corte</string>
+    <string name="dialog_legenda__text_legendas_pedido_com_falta">Pedido com falta</string>
+    <string name="dialog_legenda__text_legendas_pedido_cancelado_no_erp">Pedido cancelado no ERP</string>
+    <string name="dialog_legenda__text_legendas_pedido_com_devolucao">Pedido com devolução</string>
+    <string name="dialog_legenda__text_legendas_pedido_feito_pelo_telemarketing">Pedido feito pelo telemarketing</string>
+    <string name="dialog_legenda__text_status_orcamento">Orçamento</string>
+    <string name="dialog_legenda__imagem_view_pedido_recusado_pelo_erp">!</string>
+    <string name="dialog_legenda__imagem_view_pendente_pelo_erp">P</string>
+    <string name="dialog_legenda__imagem_view_bloqueado_pelo_erp">B</string>
+    <string name="dialog_legenda__imagem_view_liberado_pelo_erp">L</string>
+    <string name="dialog_legenda__imagem_view_montado_pelo_erp">M</string>
+    <string name="dialog_legenda__imagem_view_faturado_pelo_erp">F</string>
+    <string name="dialog_legenda__imagem_view_cancelado_pelo_erp">C</string>
+    <string name="dialog_legenda__imagem_view_orcamento">O</string>
 
 
 </resources>

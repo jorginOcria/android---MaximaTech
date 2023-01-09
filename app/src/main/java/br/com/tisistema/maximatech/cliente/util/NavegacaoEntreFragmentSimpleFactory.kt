@@ -14,11 +14,11 @@ class NavegacaoEntreFragmentSimpleFactory {
             viewActivityClient: ClienteActivity
         ): NavegacaoEntreFragments {
             return when (menuItem.itemId) {
-                R.id.item_dados -> NavegacaoParaFragmentDados(viewActivityClient, menuItem)
+                R.id.item_dados -> NavegacaoParaFragmentDadosDoCliente(viewActivityClient, menuItem)
                 R.id.item_historico_de_pedidos -> NavegacaoParaFragmentHistoricoDePedidos(viewActivityClient, menuItem)
                 R.id.item_alvaras -> NavegacaoParaFragmentAlvaras(viewActivityClient, menuItem)
                 else -> {
-                    NavegacaoParaFragmentDados(viewActivityClient, menuItem)
+                    NavegacaoParaFragmentDadosDoCliente(viewActivityClient, menuItem)
                 }
             }
             true

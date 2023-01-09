@@ -13,7 +13,7 @@
     <color name="colorPrimaryDark">#00496A</color>
     <color name="colorAccent">#ffa300</color>
 
-    <color name="cinza">#606060 </color>
+    <color name="cinza">#606060</color>
     <color name="cinza_claro">#95989A</color>
 
     <color name="fundo_splash">#186096</color>
@@ -23,16 +23,25 @@
     <color name="fundo_cards">#FFFFFF</color>
 
     <color name="amarelo_toast">#FF9500</color>
-    <color name="vermelho">#D51A52</color>
-    <color name="verde_claro">#00B998</color>
-    <color name="lilas">#9D3FE7</color>
-
+    <color name="vermelho_toast">#D51A52</color>
+    <color name="verde_claro_toast">#00B998</color>
+    <color name="lilas_toast">#9D3FE7</color>
 
     <color name="label_fragment_dados_do_cliente">#95989A</color>
     <color name="fragment_dados_do_cliente__textos_principais">#000000</color>
-    <color name="fragment_dados_do_cliente__botao_verificar_status_do_cliente">#638735 </color>
+    <color name="fragment_dados_do_cliente__botao_verificar_status_do_cliente">#638735</color>
 
+    <color name="fragment_alvara__texto_principal">#3E3E3E</color>
+    <color name="fragment_alvara__texto_secundario">#3E3E3E</color>
 
+    <color name="pedido_em_processamento">#95989A</color>
+    <color name="pedido_recusado">#FF9900</color>
+    <color name="pedido_pendente">#606060</color>
+    <color name="pedido_bloqueado">#3557AA</color>
+    <color name="pedido_liberado">#186096</color>
+    <color name="pedido_montado">#7FAA33</color>
+    <color name="pedido_faturado">#64863B</color>
+    <color name="pedido_cancelado">#E40613</color>
+    <color name="pedido_orcamento">#2D3E4E</color>
 
-    638735
 </resources>

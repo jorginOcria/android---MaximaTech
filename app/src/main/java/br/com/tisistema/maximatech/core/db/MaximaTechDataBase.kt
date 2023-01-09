@@ -5,16 +5,19 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
-import br.com.tisistema.maximatech.cliente.dao.ClienteRepository
-import br.com.tisistema.maximatech.cliente.model.Cliente
+import br.com.tisistema.maximatech.dadosdocliente.dao.DadosDoClienteRepository
+import br.com.tisistema.maximatech.dadosdocliente.model.DadosDoCliente
 import br.com.tisistema.maximatech.contato.dao.ContatoRepository
 import br.com.tisistema.maximatech.contato.model.Contato
 import br.com.tisistema.maximatech.core.cross.Constants
+import br.com.tisistema.maximatech.historicodepedidos.dao.HistoricoDePedidoRepository
+import br.com.tisistema.maximatech.historicodepedidos.model.HistoricoDePedido
 
 @Database(
     entities = [
-        Cliente::class,
-        Contato::class
+        DadosDoCliente::class,
+        Contato::class,
+        HistoricoDePedido::class
     ],
     version = 1
 )
@@ -22,8 +25,9 @@ import br.com.tisistema.maximatech.core.cross.Constants
 @TypeConverters
 abstract class MaximaTechDataBase : RoomDatabase() {
 
-    abstract fun getClienteRepository(): ClienteRepository
+    abstract fun getClienteRepository(): DadosDoClienteRepository
     abstract fun getContatoRepository(): ContatoRepository
+    abstract fun getHistoricoDePedidoRepository(): HistoricoDePedidoRepository
 
     companion object {
         private lateinit var INSTANCE: MaximaTechDataBase

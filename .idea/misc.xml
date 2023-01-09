@@ -10,20 +10,39 @@
         <entry key="..\:/Dev/MaximaTech/app/src/main/res/drawable-hdpi/shape_view_dados_do_cliente.xml" value="0.143" />
         <entry key="..\:/Dev/MaximaTech/app/src/main/res/drawable-mdpi/shape_botoes_principais.xml" value="0.143" />
         <entry key="..\:/Dev/MaximaTech/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.104" />
+        <entry key="..\:/Dev/MaximaTech/app/src/main/res/drawable-xxhdpi/shape_icon_list_historico_de_pedidos.xml" value="0.104" />
+        <entry key="..\:/Dev/MaximaTech/app/src/main/res/drawable-xxhdpi/shape_image_view_fundo.xml" value="0.104" />
+        <entry key="..\:/Dev/MaximaTech/app/src/main/res/drawable-xxhdpi/shape_pedido_bloqueado.xml" value="0.104" />
+        <entry key="..\:/Dev/MaximaTech/app/src/main/res/drawable-xxhdpi/shape_pedido_cancelado.xml" value="0.104" />
+        <entry key="..\:/Dev/MaximaTech/app/src/main/res/drawable-xxhdpi/shape_pedido_em_processamento.xml" value="0.104" />
+        <entry key="..\:/Dev/MaximaTech/app/src/main/res/drawable-xxhdpi/shape_pedido_faturado.xml" value="0.104" />
+        <entry key="..\:/Dev/MaximaTech/app/src/main/res/drawable-xxhdpi/shape_pedido_liberado.xml" value="0.104" />
+        <entry key="..\:/Dev/MaximaTech/app/src/main/res/drawable-xxhdpi/shape_pedido_montado.xml" value="0.104" />
+        <entry key="..\:/Dev/MaximaTech/app/src/main/res/drawable-xxhdpi/shape_pedido_orcamento.xml" value="0.104" />
+        <entry key="..\:/Dev/MaximaTech/app/src/main/res/drawable-xxhdpi/shape_pedido_pendente.xml" value="0.104" />
+        <entry key="..\:/Dev/MaximaTech/app/src/main/res/drawable-xxhdpi/shape_pedido_recusado.xml" value="0.104" />
+        <entry key="..\:/Dev/MaximaTech/app/src/main/res/drawable/ic_alvara.xml" value="0.104" />
         <entry key="..\:/Dev/MaximaTech/app/src/main/res/drawable/ic_launcher_background.xml" value="0.143" />
         <entry key="..\:/Dev/MaximaTech/app/src/main/res/drawable/ic_teste.xml" value="0.143" />
         <entry key="..\:/Dev/MaximaTech/app/src/main/res/layout/activity_cliente.xml" value="0.18" />
         <entry key="..\:/Dev/MaximaTech/app/src/main/res/layout/activity_main.xml" value="0.14" />
         <entry key="..\:/Dev/MaximaTech/app/src/main/res/layout/activity_splash.xml" value="0.18018018018018017" />
+        <entry key="..\:/Dev/MaximaTech/app/src/main/res/layout/dialog_legenda.xml" value="0.18" />
         <entry key="..\:/Dev/MaximaTech/app/src/main/res/layout/dialog_loading.xml" value="0.15625" />
+        <entry key="..\:/Dev/MaximaTech/app/src/main/res/layout/fragment_alvara.xml" value="0.21" />
         <entry key="..\:/Dev/MaximaTech/app/src/main/res/layout/fragment_alvaras.xml" value="0.18018018018018017" />
-        <entry key="..\:/Dev/MaximaTech/app/src/main/res/layout/fragment_dados_do_cliente.xml" value="0.21" />
-        <entry key="..\:/Dev/MaximaTech/app/src/main/res/layout/fragment_historico_de_pedidos.xml" value="0.18018018018018017" />
+        <entry key="..\:/Dev/MaximaTech/app/src/main/res/layout/fragment_dados_do_cliente.xml" value="0.18" />
+        <entry key="..\:/Dev/MaximaTech/app/src/main/res/layout/fragment_historico_de_pedidos.xml" value="0.17" />
         <entry key="..\:/Dev/MaximaTech/app/src/main/res/layout/row_contatos.xml" value="0.1" />
+        <entry key="..\:/Dev/MaximaTech/app/src/main/res/layout/row_historico_de_pedidos.xml" value="0.2" />
         <entry key="..\:/Dev/MaximaTech/app/src/main/res/layout/toast_personalizado.xml" value="0.15625" />
         <entry key="..\:/Dev/MaximaTech/app/src/main/res/layout/toolbar.xml" value="0.20833333333333334" />
         <entry key="..\:/Dev/MaximaTech/app/src/main/res/menu/menu.xml" value="0.18018018018018017" />
+        <entry key="..\:/Dev/MaximaTech/app/src/main/res/menu/menu_dados_do_cliente_inferior.xml" value="0.17094017094017094" />
+        <entry key="..\:/Dev/MaximaTech/app/src/main/res/menu/menu_dados_do_cliente_superior.xml" value="0.17094017094017094" />
         <entry key="..\:/Dev/MaximaTech/app/src/main/res/menu/menu_do_cliente.xml" value="0.18018018018018017" />
+        <entry key="..\:/Dev/MaximaTech/app/src/main/res/menu/menu_historico_de_pedido.xml" value="0.17094017094017094" />
+        <entry key="..\:/Dev/MaximaTech/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1" />
       </map>
     </option>
   </component>

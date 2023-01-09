@@ -93,10 +93,8 @@ abstract class AbstractFragment : Fragment() {
     }
 
     private fun mostrarDialogCarregando() {
-        if (dialogLoading.getStatusDialog()) {
-            val fragManager: FragmentManager = activity!!.supportFragmentManager
-            dialogLoading.show(fragManager, "tag")
-        }
+        val fragManager: FragmentManager = activity!!.supportFragmentManager
+        dialogLoading.show(fragManager, "tag")
     }
 
     fun esconderDialogLoading() {

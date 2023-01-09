@@ -1,8 +1,7 @@
 package br.com.tisistema.maximatech.contato.dao
 
 import androidx.room.*
-import androidx.room.OnConflictStrategy.IGNORE
-import br.com.tisistema.maximatech.cliente.model.Cliente
+import br.com.tisistema.maximatech.dadosdocliente.model.DadosDoCliente
 import br.com.tisistema.maximatech.contato.model.Contato
 
 @Dao
@@ -15,7 +14,7 @@ interface ContatoRepository {
     fun update(contato: Contato)
 
     @Query("select * from contato")
-    fun getAll(): List<Cliente>
+    fun getAll(): List<DadosDoCliente>
 
     @Query("delete from contato")
     fun deleteAll()

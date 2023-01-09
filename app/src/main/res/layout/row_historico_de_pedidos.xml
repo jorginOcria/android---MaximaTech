@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/row_historico_de_pedidos"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:padding="0dp">
+
+    <View
+        android:id="@+id/row_historico_de_pedidos__view"
+        android:layout_width="wrap_content"
+        android:layout_height="65dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/fragment_dados_do_cliente__view_divisora"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="65dp"
+        android:layout_marginTop="5dp"
+        android:background="#CDD3D5"
+        android:elevation="3dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/row_historico_de_pedidos__view" />
+
+
+    <ImageView
+        android:id="@+id/row_historico_de_pedidos__image_view"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="5dp"
+        android:background="@drawable/shape_icon_list_historico_de_pedidos"
+        app:layout_constraintStart_toStartOf="@+id/row_historico_de_pedidos__view"
+        app:layout_constraintTop_toTopOf="@+id/row_historico_de_pedidos__view" />
+
+    <ImageView
+        android:id="@+id/row_historico_de_pedidos__image_view_icon"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:src="@drawable/ic_maxima_em_processamento"
+        app:layout_constraintBottom_toBottomOf="@+id/row_historico_de_pedidos__image_view"
+        app:layout_constraintEnd_toEndOf="@+id/row_historico_de_pedidos__image_view"
+        app:layout_constraintStart_toStartOf="@+id/row_historico_de_pedidos__image_view"
+        app:layout_constraintTop_toTopOf="@+id/row_historico_de_pedidos__image_view" />
+
+
+    <TextView
+        android:id="@+id/row_historico_de_pedidos__text_label_numero_do_pedido"
+        style="@style/StyleTextLabelDaFragmentHistoricoDePedidos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="8dp"
+        android:elevation="1dp"
+        android:text="@string/row_historico_de_pedidos__numero_do_pedido"
+        app:layout_constraintStart_toEndOf="@+id/row_historico_de_pedidos__image_view"
+        app:layout_constraintTop_toTopOf="@id/row_historico_de_pedidos__view" />
+
+    <TextView
+        android:id="@+id/row_historico_de_pedidos__text_numero_do_pedido"
+        style="@style/StyleTextValoresDaFragmentHistoricoDePedidos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="8dp"
+        android:elevation="1dp"
+        android:text="5.421.800.637 / 5.421.800.637"
+        app:layout_constraintStart_toEndOf="@+id/row_historico_de_pedidos__text_label_numero_do_pedido"
+        app:layout_constraintTop_toTopOf="@id/row_historico_de_pedidos__view" />
+
+    <TextView
+        android:id="@+id/row_historico_de_pedidos__text_horario"
+        style="@style/StyleTextLabelDaFragmentHistoricoDePedidos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="15dp"
+        android:elevation="1dp"
+        android:text="10:15"
+        app:layout_constraintEnd_toEndOf="@+id/row_historico_de_pedidos__view"
+        app:layout_constraintTop_toTopOf="@id/row_historico_de_pedidos__view" />
+
+    <ImageView
+        android:id="@+id/row_historico_de_pedidos__image_view_tesoura"
+        style="@style/StyleTextLabelDaFragmentHistoricoDePedidos"
+        android:layout_width="13dp"
+        android:layout_height="13dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="15dp"
+        android:elevation="1dp"
+        android:src="@drawable/ic_maxima_legenda_corte"
+        android:text="10:15"
+        app:layout_constraintEnd_toEndOf="@+id/row_historico_de_pedidos__view"
+        app:layout_constraintTop_toBottomOf="@id/row_historico_de_pedidos__text_horario" />
+
+    <TextView
+        android:id="@+id/row_historico_de_pedidos__text_valor"
+        style="@style/StyleTextValoresDaFragmentHistoricoDePedidos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="15dp"
+        android:elevation="1dp"
+        android:text="R$ 617,40"
+        app:layout_constraintEnd_toEndOf="@+id/row_historico_de_pedidos__view"
+        app:layout_constraintTop_toBottomOf="@id/row_historico_de_pedidos__image_view_tesoura" />
+
+    <TextView
+        android:id="@+id/row_historico_de_pedidos__text_label_cliente"
+        style="@style/StyleTextLabelDaFragmentHistoricoDePedidos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:elevation="1dp"
+        android:text="@string/row_historico_de_pedidos__cliente"
+        app:layout_constraintStart_toEndOf="@+id/row_historico_de_pedidos__image_view"
+        app:layout_constraintTop_toBottomOf="@+id/row_historico_de_pedidos__text_label_numero_do_pedido" />
+
+    <TextView
+        android:id="@+id/row_historico_de_pedidos__label_cliente"
+        style="@style/StyleTextValoresDaFragmentHistoricoDePedidos"
+        android:layout_width="210dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="5dp"
+        android:elevation="1dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:text="848.246 - A F DA SILVA TUCUMA"
+        app:layout_constraintStart_toEndOf="@+id/row_historico_de_pedidos__text_label_cliente"
+        app:layout_constraintTop_toBottomOf="@+id/row_historico_de_pedidos__text_label_numero_do_pedido" />
+
+
+    <TextView
+        android:id="@+id/row_historico_de_pedidos__text_status"
+        style="@style/StyleTextValoresDaFragmentHistoricoDePedidos"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:elevation="1dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:text="Em processamento"
+        app:layout_constraintStart_toEndOf="@+id/row_historico_de_pedidos__image_view"
+        app:layout_constraintTop_toBottomOf="@+id/row_historico_de_pedidos__text_label_cliente" />
+
+    <TextView
+        android:id="@+id/row_historico_de_pedidos__text_label_critica"
+        style="@style/StyleTextLabelDaFragmentHistoricoDePedidos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="60dp"
+        android:elevation="1dp"
+        android:text="@string/row_historico_de_pedidos__critica"
+        app:layout_constraintEnd_toStartOf="@id/row_historico_de_pedidos__text_valor"
+        app:layout_constraintTop_toBottomOf="@+id/row_historico_de_pedidos__text_label_cliente" />
+
+    <ImageView
+        android:id="@+id/row_historico_de_pedidos__image_view_critica"
+        style="@style/StyleTextLabelDaFragmentHistoricoDePedidos"
+        android:layout_width="13dp"
+        android:layout_height="13dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="45dp"
+        android:elevation="1dp"
+        android:src="@drawable/ic_maxima_critica_alerta"
+        android:text="@string/row_historico_de_pedidos__critica"
+        app:layout_constraintEnd_toStartOf="@+id/row_historico_de_pedidos__text_valor"
+        app:layout_constraintTop_toBottomOf="@+id/row_historico_de_pedidos__text_label_cliente" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

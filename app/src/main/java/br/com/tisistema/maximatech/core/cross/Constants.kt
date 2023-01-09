@@ -18,6 +18,14 @@ class Constants private constructor() {
     object SISTEMA {
         const val TEMPO_DE_SPLASH = 3000L
         const val STRING_VAZIO = ""
+        const val VALOR_MONETARIO = "R$ 0,00"
+    }
+
+    object FRAGMENT_ATUAL {
+        const val HISTORICO_DE_PEDIDO = "historico_de_pedido"
+        const val DADOS_DO_CLIENTE = "dados_do_cliente"
+        const val ALVARAS = "alvaras"
+
     }
 
     object CORES_DOS_ITENS_DO_MENU_PRINCIPAL {
@@ -37,6 +45,7 @@ class Constants private constructor() {
         const val FORMATO_DE_DATA_RECEBIDO = "yyyy-MM-dd"
         const val FORMATO_DE_DATA_EXIBIDO = "dd/MM/yyyy"
         const val FORMATO_DATA_E_HORA = " dd/MM/yyyy HH:mm"
+        const val FORMATO_HORA = "HH:mm"
         const val FORMATO_CELULAR = "(%02d) %04d-%05d"
     }
 

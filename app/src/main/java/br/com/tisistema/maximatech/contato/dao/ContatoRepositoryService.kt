@@ -2,7 +2,7 @@ package br.com.tisistema.maximatech.contato.dao
 
 import android.content.Context
 import br.com.tisistema.maximatech.core.db.MaximaTechDataBase
-import br.com.tisistema.maximatech.cliente.model.Cliente
+import br.com.tisistema.maximatech.dadosdocliente.model.DadosDoCliente
 import br.com.tisistema.maximatech.contato.model.Contato
 import br.com.tisistema.maximatech.core.dao.AbstractRepository
 
@@ -30,7 +30,7 @@ class ContatoRepositoryService(context: Context) :
         return contato
     }
 
-    fun getAll(): List<Cliente> {
+    fun getAll(): List<DadosDoCliente> {
         return contatoRepository.getAll()
     }
 
