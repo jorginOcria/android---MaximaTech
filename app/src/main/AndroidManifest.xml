@@ -20,7 +20,7 @@
         android:theme="@style/Theme.MaximaTech">
 
         <activity
-            android:name=".splash.view.SplashActivity"
+            android:name="br.com.android.maximatech.splash.view.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -28,16 +28,16 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".main.view.MainActivity"
+        <activity android:name="br.com.android.maximatech.main.view.MainActivity"
             android:windowSoftInputMode="adjustPan">
 
         </activity>
 
-        <activity android:name=".cliente.view.ClienteActivity"
+        <activity android:name="br.com.android.maximatech.cliente.view.ClienteActivity"
             android:windowSoftInputMode="adjustPan">
         </activity>
 
-        <receiver android:name=".main.view.ReminderBroadcast"/>
+        <receiver android:name="br.com.android.maximatech.main.view.ReminderBroadcast"/>
 
     </application>
 

@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/fundo_main"
-    tools:context=".dadosdocliente.view.FragmentDadosDoCliente">
+    tools:context="br.com.android.maximatech.dadosdocliente.view.FragmentDadosDoCliente">
 
 
     <TextView

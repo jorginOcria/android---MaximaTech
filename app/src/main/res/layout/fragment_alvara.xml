@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/fundo_principal"
-    tools:context=".alvara.FragmentAlvara">
+    tools:context="br.com.android.maximatech.alvara.FragmentAlvara">
 
     <ImageView
         android:id="@+id/fragment_alvara_imagem_view"

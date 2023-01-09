@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/fundo_splash"
-    tools:context=".splash.view.SplashActivity">
+    tools:context="br.com.android.maximatech.splash.view.SplashActivity">
 
     <ImageView
         android:layout_width="150dp"

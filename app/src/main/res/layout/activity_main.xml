@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:id="@+id/activity_main"
     android:background="@color/fundo_main"
-    tools:context=".main.view.MainActivity">
+    tools:context="br.com.android.maximatech.main.view.MainActivity">
 
     <androidx.appcompat.widget.Toolbar
         style="@style/StyleToolbar"

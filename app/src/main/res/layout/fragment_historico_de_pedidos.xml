@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/fundo_principal"
-    tools:context=".historicodepedidos.view.FragmentHistoricoDePedidos">
+    tools:context="br.com.android.maximatech.historicodepedidos.view.FragmentHistoricoDePedidos">
 
     <TextView
         android:id="@+id/fragment_historico_de_pedidos_text_loading"
