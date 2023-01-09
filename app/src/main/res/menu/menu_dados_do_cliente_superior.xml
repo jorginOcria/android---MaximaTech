@@ -6,6 +6,7 @@
         android:id="@+id/menu_dados_do_cliente_superior__item_search"
         android:icon="@drawable/ic_pesquisar"
         android:title="@string/menu_historico_de_pedido__legendas"
+        app:actionViewClass="android.widget.SearchView"
         android:visible="false"
         app:showAsAction="ifRoom|collapseActionView" />
 

@@ -28,9 +28,16 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".main.view.MainActivity"></activity>
+        <activity android:name=".main.view.MainActivity"
+            android:windowSoftInputMode="adjustPan">
 
-        <activity android:name=".cliente.view.ClienteActivity"></activity>
+        </activity>
+
+        <activity android:name=".cliente.view.ClienteActivity"
+            android:windowSoftInputMode="adjustPan">
+        </activity>
+
+        <receiver android:name=".main.view.ReminderBroadcast"/>
 
     </application>
 

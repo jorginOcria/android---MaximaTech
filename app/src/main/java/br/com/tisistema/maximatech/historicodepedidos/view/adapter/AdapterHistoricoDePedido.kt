@@ -6,6 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
+import android.widget.Filter
+import android.widget.Filterable
 import android.widget.TextView
 import br.com.tisistema.maximatech.R
 import br.com.tisistema.maximatech.core.cross.Constants
@@ -13,12 +15,13 @@ import br.com.tisistema.maximatech.historicodepedidos.model.HistoricoDePedido
 
 class AdapterHistoricoDePedido(
     context: Context,
-    private val historicoDePedidos: List<HistoricoDePedido>
-) : BaseAdapter() {
+    private var historicoDePedidos: List<HistoricoDePedido>
+) : BaseAdapter(), Filterable {
 
     private val inflater: LayoutInflater =
         context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
     private lateinit var rowView: View
+    private var historicoDePedidosFiltrado = historicoDePedidos
 
     @SuppressLint("ViewHolder")
     override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
@@ -42,7 +45,8 @@ class AdapterHistoricoDePedido(
 
 
         val historicoDePedido = getItem(posicao) as HistoricoDePedido
-        numeroDoPedido.text = "${historicoDePedido.numeroDoPedidoRca} / ${historicoDePedido.numeroDoPedidoErp}"
+        numeroDoPedido.text =
+            "${historicoDePedido.numeroDoPedidoRca} / ${historicoDePedido.numeroDoPedidoErp}"
         cliente.text = "${historicoDePedido.codigoDoCliente} - ${historicoDePedido.nomeDoCliente}"
         status.text = historicoDePedido.status
         valor.text = Constants.SISTEMA.VALOR_MONETARIO
@@ -64,5 +68,40 @@ class AdapterHistoricoDePedido(
 
     override fun getCount(): Int {
         return historicoDePedidos.size
+    }
+
+    override fun getFilter(): Filter {
+        return object : Filter() {
+            override fun performFiltering(constraint: CharSequence): FilterResults {
+                val results = FilterResults()
+                if (!constraint.isNullOrEmpty()) {
+                    val arrayListHistoricoDePedidos: ArrayList<HistoricoDePedido> = ArrayList<HistoricoDePedido>()
+                    for (i in historicoDePedidosFiltrado.indices) {
+                        if (historicoDePedidosFiltrado[i].nomeDoCliente!!.toUpperCase()
+                                .contains(constraint.toString().toUpperCase())
+                        ) {
+                            val historicoDePedido = HistoricoDePedido()
+                            historicoDePedido.nomeDoCliente = historicoDePedidosFiltrado[i].nomeDoCliente
+                            arrayListHistoricoDePedidos.add(historicoDePedido)
+                        }
+                    }
+                    results.count = historicoDePedidosFiltrado.size
+                    results.values = historicoDePedidosFiltrado
+                } else {
+                    results.count = historicoDePedidosFiltrado.size
+                    results.values = historicoDePedidosFiltrado
+                }
+                return results
+            }
+
+            override fun publishResults(
+                constraint: CharSequence,
+                results: FilterResults
+            ) {
+                historicoDePedidos = results.values as List<HistoricoDePedido>
+                notifyDataSetChanged()
+            }
+        }
+        return filter
     }
 }

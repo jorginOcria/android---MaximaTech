@@ -9,6 +9,7 @@ import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import br.com.tisistema.maximatech.R
 import br.com.tisistema.maximatech.cliente.controller.ControllerCliente
@@ -28,7 +29,6 @@ class ClienteActivity : AbstractActivity() {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
-
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_cliente)
         carregarToolbar()
@@ -119,6 +119,8 @@ class ClienteActivity : AbstractActivity() {
     override fun runObservers() {
     }
 
+    private fun carregarImageViewExisteConexaoComInternet() {}
+
     override fun onBackPressed() {
         navegarParaMainActivity()
     }
@@ -160,6 +162,7 @@ class ClienteActivity : AbstractActivity() {
         transacaoDeFragment.replace(R.id.fragment_container, fragmet)
         transacaoDeFragment.commit()
     }
+
     private fun navegarParaMainActivity() {
         startActivity(Intent(this, MainActivity::class.java))
         finish()

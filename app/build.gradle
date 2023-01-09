@@ -63,5 +63,7 @@ dependencies {
     kapt 'androidx.room:room-compiler:2.4.3'
     implementation 'androidx.room:room-runtime:2.4.3'
     implementation "com.wajahatkarim:easyvalidation-toast:1.0.4"
+    implementation 'androidx.work:work-runtime-ktx:2.7.1'
+
 
 }

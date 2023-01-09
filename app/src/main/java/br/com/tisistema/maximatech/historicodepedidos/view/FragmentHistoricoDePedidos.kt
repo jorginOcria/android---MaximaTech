@@ -1,21 +1,22 @@
 package br.com.tisistema.maximatech.historicodepedidos.view
 
 import android.app.AlertDialog
+import android.app.SearchManager
+import android.content.Context
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
+import android.widget.SearchView
+import androidx.core.view.MenuItemCompat
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import br.com.tisistema.maximatech.R
 import br.com.tisistema.maximatech.cliente.view.ClienteActivity
-import br.com.tisistema.maximatech.contato.view.adapter.AdapterContato
 import br.com.tisistema.maximatech.core.view.AbstractFragment
 import br.com.tisistema.maximatech.historicodepedidos.controller.ControllerHistoricoDePedido
 import br.com.tisistema.maximatech.historicodepedidos.model.HistoricoDePedido
 import br.com.tisistema.maximatech.historicodepedidos.view.adapter.AdapterHistoricoDePedido
-import kotlinx.android.synthetic.main.fragment_dados_do_cliente.*
 import kotlinx.android.synthetic.main.fragment_historico_de_pedidos.*
+
 
 class FragmentHistoricoDePedidos : AbstractFragment() {
 
@@ -23,6 +24,10 @@ class FragmentHistoricoDePedidos : AbstractFragment() {
     private lateinit var fragmetHistoricoDePedidos: View
     private lateinit var adapterHistoricoDePedido: AdapterHistoricoDePedido
     private var historicoDePedidos: List<HistoricoDePedido> = arrayListOf()
+    private lateinit var menuItem: MenuItem
+    private lateinit var searchView: SearchView
+    private val arrayListHistoricoDePedido: ArrayList<HistoricoDePedido> =
+        ArrayList<HistoricoDePedido>()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -56,8 +61,31 @@ class FragmentHistoricoDePedidos : AbstractFragment() {
             })
     }
 
-    private fun esconderTextLoading(){
+    private fun esconderTextLoading() {
         fragment_historico_de_pedidos_text_loading.visibility = View.GONE
+    }
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        setHasOptionsMenu(true)
+        super.onCreate(savedInstanceState)
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        inflater.inflate(R.menu.menu_dados_do_cliente_superior, menu)
+        menuItem = menu.findItem(R.id.menu_dados_do_cliente_superior__item_search)
+        searchView = MenuItemCompat.getActionView(menuItem) as SearchView
+        searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+            override fun onQueryTextSubmit(p0: String?): Boolean {
+                return false
+            }
+
+            override fun onQueryTextChange(p0: String?): Boolean {
+                return false
+            }
+
+        })
+
+        super.onCreateOptionsMenu(menu, inflater)
     }
 
     private fun mostrarDialogFalhaAoBuscarHistoricoDePedido() {
@@ -94,6 +122,7 @@ class FragmentHistoricoDePedidos : AbstractFragment() {
         adapterHistoricoDePedido =
             activity?.let { it1 -> AdapterHistoricoDePedido(it1, historicoDePedidos) }!!
         fragment_historico_de_pedidos__list_historico_de_pedidos.adapter = adapterHistoricoDePedido
+
     }
 
     private fun verificarConexaoComAInternet() {

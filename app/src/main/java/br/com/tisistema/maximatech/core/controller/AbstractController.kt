@@ -32,7 +32,6 @@ abstract class AbstractController(application: Application) : AndroidViewModel(a
         return mutableHTTPNaoCarregando
     }
 
-
     private var mutableMudancaDeStatusDeConexaoComInternet = MutableLiveData<Boolean>()
     fun getMudancaDeStatusDeConexaoComInternet(): LiveData<Boolean> {
         return mutableMudancaDeStatusDeConexaoComInternet

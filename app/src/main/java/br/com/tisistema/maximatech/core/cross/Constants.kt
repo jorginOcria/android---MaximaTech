@@ -33,6 +33,12 @@ class Constants private constructor() {
         const val ITEM_INATIVO = "#95B6CF"
     }
 
+    object NOTIFICACAO {
+        const val ID = "notificacao"
+        const val TITULO = "Atenção!"
+        const val TEXTO ="MaximaTech... CLique aqui para abrir o App"
+    }
+
     object TIMEOUT {
         const val ENDPOINTS_GERAIS = 15L
     }

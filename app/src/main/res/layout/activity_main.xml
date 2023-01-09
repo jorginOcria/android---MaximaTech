@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/activity_main"
     android:background="@color/fundo_main"
     tools:context=".main.view.MainActivity">
 
@@ -202,7 +203,6 @@
         android:layout_marginEnd="60dp"
         android:layout_marginBottom="15dp"
         android:gravity="center"
-        android:text="v.1.0.0"
         app:layout_constraintBottom_toBottomOf="@+id/activity_main__view_informacoes_atuais_do_aplicativo"
         app:layout_constraintEnd_toEndOf="@+id/activity_main__view_informacoes_atuais_do_aplicativo"
         app:layout_constraintStart_toStartOf="@+id/activity_main__view_informacoes_atuais_do_aplicativo" />
@@ -213,7 +213,6 @@
         android:layout_height="35dp"
         android:layout_marginStart="10dp"
         android:layout_marginBottom="10dp"
-        android:src="@drawable/ic_maxima_nuvem_conectado"
         android:textColor="@color/cinza"
         app:layout_constraintBottom_toBottomOf="@+id/activity_main__view_informacoes_atuais_do_aplicativo"
         app:layout_constraintStart_toEndOf="@+id/activity_main__versao_do_aplicativo" />
